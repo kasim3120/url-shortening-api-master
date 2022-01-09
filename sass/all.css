@@ -1,0 +1,115 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 1440px;
+  margin: auto;
+}
+
+body .container {
+  padding: 2rem 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .menu a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #9e9aa7;
+}
+
+header .login a {
+  text-decoration: none;
+  color: #9e9aa7;
+  border-radius: 1.5rem;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+header .login a:hover {
+  color: #fff;
+  background-color: #2acfcf;
+}
+
+banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 500px;
+}
+
+banner left {
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+  height: 300px;
+}
+
+banner left h1 {
+  line-height: 1;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+banner left p {
+  margin-bottom: 1.5rem;
+  color: #9e9aa7;
+}
+
+banner left a {
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  color: #fff;
+  background-color: #2acfcf;
+}
+
+banner right {
+  overflow: hidden;
+}
+
+banner right img {
+  position: relative;
+  left: 150px;
+}
+
+label {
+  max-width: 2rem;
+  height: 3rem;
+  background: url(../images/bg-boost-desktop.svg);
+}
+/*# sourceMappingURL=all.css.map */
