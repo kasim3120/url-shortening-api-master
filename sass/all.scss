@@ -4,8 +4,15 @@
     padding:0;
     font-family: 'Poppins', sans-serif;
     border:none;
-    
+    a{
+        cursor: pointer;
+    }
 }
+
+$bg-color:hsl(260, 30%, 20%);
+$Cyan: hsl(180, 66%, 49%);
+$white:#fff;
+$gray:hsl(0, 0%, 75%);
 
 body{
     max-width:100%;
@@ -24,18 +31,21 @@ header{
         a{
             margin-right: 1rem;            
             text-decoration: none;
-            color:hsl(257, 7%, 63%);
+            color:$gray;
+            &:hover{
+                color:#000;
+            }
         }
     }
     .login{
         a{
             text-decoration: none;
-            color:hsl(257, 7%, 63%);;
+            color:$gray;
             border-radius:1.5rem;
             padding:0.5rem 1rem; 
             &:hover{
-                color:#fff;
-                background-color: hsl(180, 66%, 49%);
+                color:$white;
+                background-color: $Cyan;
             }
         }
     }
@@ -45,7 +55,7 @@ banner{
     justify-content: space-between;
     align-items:center;
     height: 100%;
-    position: relative;
+    
     margin-bottom:100px;
     left{
         display: block;
@@ -60,13 +70,13 @@ banner{
         }
         p{
             margin-bottom: 1.5rem;
-            color:hsl(257, 7%, 63%);
+            color:$gray;
         }
         a{
             padding:0.5rem 1rem; 
             border-radius:1.5rem;
-            color:#fff;
-            background-color: hsl(180, 66%, 49%);
+            color:$white;
+            background-color: $Cyan;
         }
     }
     right{
@@ -77,44 +87,55 @@ banner{
         }
     }
 }
-.search{
-    position: absolute;bottom:-14%;left:10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin:auto;
-    width: 80%;
-    height: 100px;
-    border-radius:10px;
-    background: url(../images/bg-boost-desktop.svg) hsl(255, 11%, 22%); 
-    input{
-        margin:auto 10px;
-        border:none;
-        border-radius:5px;
-        width: 80%;
-        height: 40%;
-        &::placeholder{
-            padding:20px;
-        }
-    }
-    button{
-        width: 10%;
-        height: 40%;
-        border-radius:5px;
-        background-color: hsl(180, 66%, 49%);
-        color:#fff;
-    }
-}
 
 main{
     display: flex;
     flex-direction: column;
-    margin: 50px auto;
     padding: 50px;
     background: rgba(191, 191, 191, 0.3);
     height: 100%;
+    position: relative;
+    .search{
+        position: absolute;top:-8%;left:10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin:auto;
+        width: 80%;
+        height: 100px;
+        border-radius:10px;
+        background: url(../images/bg-boost-desktop.svg) $bg-color; 
+        input{
+            margin:auto 10px;
+            padding: 10px;
+            border:none;
+            border-radius:5px;
+            width: 80%;
+            height: 40%;
+            outline: none;
+            &::placeholder{
+                padding:20px;
+            }
+        }
+        button{
+            width: 10%;
+            height: 40%;
+            border-radius:5px;
+            background-color: $Cyan;
+            color:$white;
+            cursor: pointer;
+        }
+    }
+    .search-table{
+        display: flex;
+        justify-content: center;
+        margin:5px;
+        padding:10px 5px;
+        background: $white;
+        width: 80%;
+        }
     p{
-        color:#9e9aa7;
+        color:$gray;
     }
     .main-title{
         margin:30px auto ;
@@ -133,7 +154,7 @@ main{
         }
         &:after{
             content: '';
-            background-color: rgb(3, 180, 171);
+            background-color: $Cyan;
             width: 700px;
             height: 7px;
             display: block;
@@ -142,12 +163,12 @@ main{
         }
         .main-text{
             display:flex;
-            width:250px;
+            width:300px;
             height:200px;
-            margin:30px;
+            margin:20px;
             padding: 20px;
             flex-direction: column;
-            background-color: #fff;
+            background-color: $white;
             p{
                 font-size: 10px;
             }
@@ -205,9 +226,66 @@ main{
                     align-items: center;
                 }
             }
-            .line{
-                content:'123';
-            } 
         }
+    }
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    .top{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url(../images/bg-shorten-desktop.svg) $bg-color;
+        width: 100%;
+        height: 150px;
+        h2{
+            color: $white;
+        }
+        a{ 
+            width: auto;
+            margin: 10px;
+            padding:0.5rem 1.5rem; 
+            border-radius:1.5rem;
+            color:$white;
+            background-color: $Cyan;
+        }
+    }
+    .bottom{
+        display: flex;
+        justify-content: space-around;
+        padding: 50px;
+        width: 100%;
+        height: 250px;
+        background: hsl(260, 20%, 10%);
+        .footer-middle{
+            display: flex;
+            justify-content: space-around;
+            width: 500px;
+            color:$white;
+            font-size: 16px;
+            .footer-text{
+                display: flex;
+                flex-direction:column;
+                h4{
+                    margin-bottom: 10px;
+                }
+                a{
+                    margin-bottom:5px;
+                    font-weight: 100;
+                    color:$gray;
+                }
+            }
+        }
+        .footer-icon{
+            color:$white;
+            a{
+                margin:5px;
+            }
+        }
+        
     }
 }
