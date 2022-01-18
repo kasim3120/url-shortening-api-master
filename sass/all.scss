@@ -113,23 +113,38 @@ main{
     padding: 50px;
     background: rgba(191, 191, 191, 0.3);
     height: 100%;
+    p{
+        color:#9e9aa7;
+    }
     .main-title{
         margin:30px auto ;
         padding:3px;
-        max-width: 50%;
-        text-align: center;p{
-            font-size: 10px;
-        }
+        max-width: 40%;
+        text-align: center;
     }
     .main-text-card{
         display: flex;
-        justify-content: space-around;
-
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 350px;
+        h4{
+            margin-bottom: 5px;
+        }
+        &:after{
+            content: '';
+            background-color: rgb(3, 180, 171);
+            width: 700px;
+            height: 7px;
+            display: block;
+            position: absolute; left:200px;
+            z-index:-1;
+        }
         .main-text{
             display:flex;
-            width:300px;
+            width:250px;
             height:200px;
-            margin:10px;
+            margin:30px;
             padding: 20px;
             flex-direction: column;
             background-color: #fff;
@@ -137,15 +152,62 @@ main{
                 font-size: 10px;
             }
             &.brand{
+                display: flex;
+                justify-content: center;
                 align-self: flex-start;
+                position: relative;
+                &::before{
+                    content: url(../images/icon-brand-recognition.svg);
+                    position: absolute;top:-35px;
+                    background: hsl(260, 8%, 14%);
+                    width: 60px;height: 60px;
+                    border-radius: 50%;
+                    margin: auto;
+                    padding: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
             &.detailed{
+                display: flex;
+                justify-content: center;
                 align-self: center;
+                position: relative;
+                &::before{
+                    content: url(../images/icon-detailed-records.svg);
+                    position: absolute;top:-35px;
+                    background: hsl(260, 8%, 14%);
+                    width: 60px;height: 60px;
+                    border-radius: 50%;
+                    margin: auto;
+                    padding: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
             &.fully{
+                display: flex;
+                justify-content: center;
                 align-self: flex-end;
+                position: relative;
+                &::before{
+                    content: url(../images/icon-fully-customizable.svg);
+                    position: absolute;top:-35px;
+                    background: hsl(260, 8%, 14%);
+                    width: 60px;height: 60px;
+                    border-radius: 50%;
+                    margin: auto;
+                    padding: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
+            .line{
+                content:'123';
+            } 
         }
-        
     }
 }
