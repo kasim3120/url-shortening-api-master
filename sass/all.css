@@ -11,56 +11,108 @@
   cursor: pointer;
 }
 
-body {
+* img {
   max-width: 100%;
-  margin: auto;
+  max-height: 100%;
 }
 
-body .container {
+.container {
   padding: 2rem 2rem;
 }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+header .navbar {
+  display: none;
+}
+
+header .navbar .menu-hidden {
+  display: none;
 }
 
 header .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-header .menu a {
+header .menu .menu-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 15px;
+}
+
+header .menu .menu-bar a {
   margin-right: 1rem;
   text-decoration: none;
   color: #bfbfbf;
 }
 
-header .menu a:hover {
+header .menu .menu-bar a:hover {
   color: #000;
 }
 
-header .login a {
+header .menu .menu-login a {
   text-decoration: none;
   color: #bfbfbf;
   border-radius: 1.5rem;
   padding: 0.5rem 1rem;
 }
 
-header .login a:hover {
+header .menu .menu-login a:hover {
   color: #fff;
   background-color: #2acfcf;
+}
+
+@media (max-width: 414px) {
+  header .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .navbar .collapse {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .menu {
+    display: none;
+  }
+  header .menu .menu-bar {
+    display: none;
+  }
+  header .menu .menu-login {
+    display: none;
+  }
+  header .menu .logo {
+    display: block;
+  }
+  header .menu-hidden {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 1rem;
+    background: #000;
+  }
+  header .menu-hidden .hamburger {
+    display: block;
+  }
+  header .menu-hidden .hamburger i {
+    font-size: 32px;
+    color: #bfbfbf;
+    position: absolute;
+  }
 }
 
 banner {
@@ -105,6 +157,12 @@ banner left a {
   border-radius: 1.5rem;
   color: #fff;
   background-color: #2acfcf;
+  text-decoration: none;
+}
+
+banner left a:hover {
+  color: #fff;
+  background-color: #56dcdc;
 }
 
 banner right {
@@ -114,6 +172,15 @@ banner right {
 banner right img {
   position: relative;
   left: 150px;
+}
+
+@media (max-width: 414px) {
+  banner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 main {
@@ -131,9 +198,21 @@ main {
 }
 
 main .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .search .search-bar {
   position: absolute;
   top: -8%;
-  left: 10%;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,40 +223,41 @@ main .search {
       -ms-flex-pack: center;
           justify-content: center;
   margin: auto;
-  width: 80%;
+  width: 100%;
   height: 100px;
   border-radius: 10px;
   background: url(../images/bg-boost-desktop.svg) #2e2442;
 }
 
-main .search input {
+main .search .search-bar input {
   margin: auto 10px;
   padding: 10px;
   border: none;
   border-radius: 5px;
-  width: 80%;
+  width: 70%;
   height: 40%;
   outline: none;
 }
 
-main .search input::-webkit-input-placeholder {
+main .search .search-bar input::-webkit-input-placeholder {
   padding: 20px;
 }
 
-main .search input:-ms-input-placeholder {
+main .search .search-bar input:-ms-input-placeholder {
   padding: 20px;
 }
 
-main .search input::-ms-input-placeholder {
+main .search .search-bar input::-ms-input-placeholder {
   padding: 20px;
 }
 
-main .search input::placeholder {
+main .search .search-bar input::placeholder {
   padding: 20px;
 }
 
-main .search button {
-  width: 10%;
+main .search .search-bar button {
+  min-width: 10%;
+  padding: 0 15px;
   height: 40%;
   border-radius: 5px;
   background-color: #2acfcf;
@@ -185,7 +265,12 @@ main .search button {
   cursor: pointer;
 }
 
-main .search-table {
+main .search .search-bar button:hover {
+  color: #fff;
+  background-color: #56dcdc;
+}
+
+main .search .search-table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -194,8 +279,12 @@ main .search-table {
           justify-content: center;
   margin: 5px;
   padding: 10px 5px;
+  width: 90%;
+}
+
+main .search .search-table ul li {
   background: #fff;
-  width: 80%;
+  list-style-type: none;
 }
 
 main p {
@@ -356,6 +445,28 @@ main .main-text-card .main-text.fully::before {
           align-items: center;
 }
 
+@media (max-width: 414px) {
+  main .main-text-card:after {
+    content: '';
+    background-color: #2acfcf;
+    width: 300px;
+    height: 7px;
+    display: block;
+    position: absolute;
+    left: -100px;
+    z-index: -1;
+  }
+  main .main-text-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -397,6 +508,13 @@ footer .top a {
   border-radius: 1.5rem;
   color: #fff;
   background-color: #2acfcf;
+  text-decoration: none;
+}
+
+footer .top a:hover {
+  color: #fff;
+  background-color: #56dcdc;
+  text-decoration: none;
 }
 
 footer .bottom {
