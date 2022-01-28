@@ -698,9 +698,10 @@ main .main-text-card .main-text.fully::before {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    margin: 5px 0;
   }
   main .search-table .search-table-context .search-line {
-    border-bottom: 1px solid #bfbfbf;
+    border-bottom: 2px solid #bfbfbf;
     max-width: 100%;
     margin: 5px 0;
   }
@@ -708,11 +709,12 @@ main .main-text-card .main-text.fully::before {
     text-align: left;
     padding: 0;
     width: 100%;
+    margin: 5px 0;
   }
   main .search-table .search-table-context .copy {
-    margin-left: 0;
     width: 100%;
     height: 40px;
+    margin: 5px 0;
   }
   main .main-title {
     margin: 30px 0 auto;
