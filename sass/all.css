@@ -177,6 +177,7 @@ banner {
   height: 100%;
   max-width: 100%;
   margin-bottom: 100px;
+  position: relative;
 }
 
 banner left {
@@ -230,6 +231,103 @@ banner right {
   max-width: 50%;
 }
 
+banner .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+banner .search .search-bar {
+  position: absolute;
+  bottom: -45%;
+  left: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  height: 130px;
+  border-radius: 10px;
+  background: url(../images/bg-boost-desktop.svg) #2e2442;
+}
+
+banner .search .search-bar .search-bar-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+}
+
+banner .search .search-bar .search-bar-input input {
+  margin: 0px 15px;
+  margin-top: 20px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  outline: none;
+}
+
+banner .search .search-bar .search-bar-input input::-webkit-input-placeholder {
+  padding: 20px;
+}
+
+banner .search .search-bar .search-bar-input input:-ms-input-placeholder {
+  padding: 20px;
+}
+
+banner .search .search-bar .search-bar-input input::-ms-input-placeholder {
+  padding: 20px;
+}
+
+banner .search .search-bar .search-bar-input input::placeholder {
+  padding: 20px;
+}
+
+banner .search .search-bar .search-bar-input .search-bar-prompt {
+  visibility: hidden;
+  margin: 0;
+  margin-right: auto;
+  color: #f46262;
+}
+
+banner .search .search-bar .search-bar-button {
+  width: 150px;
+  padding: 0 15px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #2acfcf;
+  color: #fff;
+  cursor: pointer;
+}
+
+banner .search .search-bar .search-bar-button:hover {
+  color: #fff;
+  background-color: #56dcdc;
+}
+
 @media (max-width: 414px) {
   banner {
     -webkit-box-orient: vertical;
@@ -253,6 +351,95 @@ banner right {
     max-height: 100%;
     margin: 20px;
   }
+  banner .search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  banner .search .search-bar {
+    position: absolute;
+    bottom: -50%;
+    left: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+    height: 200px;
+    border-radius: 10px;
+    background: url(../images/bg-boost-desktop.svg) #2e2442;
+  }
+  banner .search .search-bar .search-bar-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    width: 100%;
+  }
+  banner .search .search-bar .search-bar-input input {
+    margin: 0 15px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px;
+    width: 90%;
+    height: 50px;
+    outline: none;
+  }
+  banner .search .search-bar .search-bar-input input::-webkit-input-placeholder {
+    padding: 20px;
+  }
+  banner .search .search-bar .search-bar-input input:-ms-input-placeholder {
+    padding: 20px;
+  }
+  banner .search .search-bar .search-bar-input input::-ms-input-placeholder {
+    padding: 20px;
+  }
+  banner .search .search-bar .search-bar-input input::placeholder {
+    padding: 20px;
+  }
+  banner .search .search-bar .search-bar-input .search-bar-prompt {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: hidden;
+    margin: 5px 0;
+    width: 85%;
+    color: #f46262;
+    font-size: 8px;
+  }
+  banner .search .search-bar .search-bar-button {
+    width: 90%;
+    padding: 0 15px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #2acfcf;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+  }
+  banner .search .search-bar .search-bar-button:hover {
+    color: #fff;
+    background-color: #56dcdc;
+  }
 }
 
 main {
@@ -266,10 +453,13 @@ main {
   padding: 50px;
   background: rgba(191, 191, 191, 0.3);
   height: 100%;
-  position: relative;
 }
 
-main .search {
+main p {
+  color: #bfbfbf;
+}
+
+main .search-table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,136 +467,56 @@ main .search {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-main .search .search-bar {
-  position: absolute;
-  top: -8%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 90%;
-  height: 130px;
-  border-radius: 10px;
-  background: url(../images/bg-boost-desktop.svg) #2e2442;
-}
-
-main .search .search-bar .search-bar-input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 30px;
-}
-
-main .search .search-bar .search-bar-input input {
-  margin: 0 15px;
-  padding: 0 10px;
-  border: none;
-  border-radius: 5px;
-  width: 70%;
-  height: 50px;
-  outline: none;
-}
-
-main .search .search-bar .search-bar-input input::-webkit-input-placeholder {
-  padding: 20px;
-}
-
-main .search .search-bar .search-bar-input input:-ms-input-placeholder {
-  padding: 20px;
-}
-
-main .search .search-bar .search-bar-input input::-ms-input-placeholder {
-  padding: 20px;
-}
-
-main .search .search-bar .search-bar-input input::placeholder {
-  padding: 20px;
-}
-
-main .search .search-bar .search-bar-input button {
-  min-width: 15%;
-  padding: 0 15px;
-  height: 50px;
-  border-radius: 5px;
-  background-color: #2acfcf;
-  color: #fff;
-  cursor: pointer;
-}
-
-main .search .search-bar .search-bar-input button:hover {
-  color: #fff;
-  background-color: #56dcdc;
-}
-
-main .search .search-bar .search-bar-prompt {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  visibility: hidden;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 5px;
-}
-
-main .search .search-bar .search-bar-prompt p {
-  margin: 0;
-  padding-left: 5px;
-  width: 85%;
-  color: #f46262;
-}
-
-main .search .search-table {
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   margin: 5px;
   padding: 10px 5px;
   width: 100%;
 }
 
-main .search .search-table .search-table-text {
+main .search-table .search-table-context {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background: #fff;
   list-style-type: none;
-  margin: 5px 0;
+  margin: 10px 0;
+  padding: 10px 30px;
+  width: 100%;
   height: 50px;
+  border-radius: 5px;
 }
 
-main .search .search-table .search-table-text p {
+main .search-table .search-table-context .search-table-text {
+  color: #000;
+  width: 100%;
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-main p {
-  color: #bfbfbf;
+main .search-table .search-table-context .search-table-link {
+  justify-self: flex-end;
+  text-decoration: none;
+  text-align: right;
+  color: #2acfcf;
+  margin-left: auto;
+  padding-left: 20px;
+  width: 30%;
+}
+
+main .search-table .search-table-context .copy {
+  margin-left: 10px;
+  width: 80px;
+  border-radius: 5px;
+  color: #fff;
+  background: #2acfcf;
+}
+
+main .search-table .search-table-context .copy:hover {
+  background: #56dcdc;
 }
 
 main .main-title {
@@ -449,14 +559,15 @@ main .main-text-card .main-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 300px;
-  height: 200px;
-  margin: 20px;
-  padding: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 300px;
+  height: 200px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
   background-color: #fff;
 }
 
@@ -561,51 +672,47 @@ main .main-text-card .main-text.fully::before {
 }
 
 @media (max-width: 414px) {
-  main .search .search-bar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: absolute;
-    top: -7%;
-    height: 150px;
+  main {
+    padding: 20px;
   }
-  main .search .search-bar .search-bar-input {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  main .search-table {
     margin: 0;
+    margin-top: 90px;
+    padding: 10px 0;
+    width: 100%;
+  }
+  main .search-table .search-table-context {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 5px 0;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+  }
+  main .search-table .search-table-context .search-table-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  main .search-table .search-table-context .search-line {
+    border-bottom: 1px solid #bfbfbf;
+    max-width: 100%;
+    margin: 5px 0;
+  }
+  main .search-table .search-table-context .search-table-link {
+    text-align: left;
     padding: 0;
+    width: 100%;
   }
-  main .search .search-bar .search-bar-input input {
+  main .search-table .search-table-context .copy {
+    margin-left: 0;
     width: 100%;
     height: 40px;
-    margin: 5px auto;
-    padding: 0 10px;
-  }
-  main .search .search-bar .search-bar-input button {
-    width: 100%;
-    margin: 5px auto;
-    height: 40px;
-  }
-  main .search .search-table {
-    margin-top: 40px;
   }
   main .main-title {
     margin: 30px 0 auto;

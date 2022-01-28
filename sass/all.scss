@@ -161,6 +161,7 @@ banner{
     height: 100%;
     max-width: 100%;
     margin-bottom:100px;
+    position: relative;
     left{
         display: flex;
         flex-direction: column;
@@ -197,6 +198,65 @@ banner{
         margin-left:10px;
         max-width:50%;
     }
+    .search{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .search-bar{
+            position: absolute;
+            bottom:-45%;
+            left:60px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 90%;
+            height: 130px;
+            border-radius:10px;
+            background: url(../images/bg-boost-desktop.svg) $bg-color; 
+            .search-bar-input{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 70%;
+                input{
+                margin:0px 15px;
+                margin-top:20px;
+                padding: 0 10px;
+                border:none;
+                border-radius:5px;
+                width: 100%;
+                height: 50px;
+                outline: none;
+                &::placeholder{
+                    padding:20px;
+                    }
+                }
+                .search-bar-prompt{
+                    visibility:hidden;
+                    margin:0;
+                    margin-right:auto;
+                    color:$red;
+                }
+            }
+            .search-bar-button{
+                    width: 150px;
+                    padding:0 15px;
+                    height: 50px;
+                    border-radius:5px;
+                    background-color: $Cyan;
+                    color:$white;
+                    cursor: pointer;
+                    &:hover{
+                        color:$white;
+                        background-color:hsl(180, 66%, 60%);
+                }
+            }
+            
+        }
+        
+    }
+    
 }
 @media (max-width:414px) {
     banner{
@@ -217,8 +277,70 @@ banner{
             max-height: 100%;
             margin:20px;
         }
+        .search{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .search-bar{
+                position: absolute;
+                bottom:-50%;
+                left:20px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 90%;
+                height: 200px;
+                border-radius:10px;
+                background: url(../images/bg-boost-desktop.svg) $bg-color; 
+                .search-bar-input{
+                    display: flex;
+                    justify-content: center;
+                    margin:0;
+                    width: 100%;
+                    input{
+                        margin:0 15px;
+                        padding: 0 10px;
+                        border:none;
+                        border-radius:5px;
+                        width: 90%;
+                        height: 50px;
+                        outline: none;
+                        
+                        &::placeholder{
+                            padding:20px;
+                        }
+                    }
+                    .search-bar-prompt{
+                        display: flex;
+                        visibility:hidden;
+                        margin: 5px 0;
+                        width: 85%;
+                        color: $red;
+                        font-size: 8px;
+                        }
+                    }
+                    .search-bar-button{
+                        width: 90%;
+                        padding:0 15px;
+                        height: 50px;
+                        border-radius:5px;
+                        background-color: $Cyan;
+                        text-align: center;
+                        color:$white;
+                        cursor: pointer;
+                        &:hover{
+                            color:$white;
+                            background-color:hsl(180, 66%, 60%);
+                        }
+                    }
+                }
+                
+            }
+            
+        }
     }
-}
+
 
 main{
     display: flex;
@@ -226,88 +348,53 @@ main{
     padding: 50px;
     background: rgba(191, 191, 191, 0.3);
     height: 100%;
-    position: relative;
-    .search{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        .search-bar{
-            position: absolute;
-            top:-8%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            width: 90%;
-            height: 130px;
-            border-radius:10px;
-            background: url(../images/bg-boost-desktop.svg) $bg-color; 
-            .search-bar-input{
-                display: flex;
-                justify-content: center;
-                margin-top: 30px;
-                input{
-                    margin:0 15px;
-                    padding: 0 10px;
-                    border:none;
-                    border-radius:5px;
-                    width: 70%;
-                    height: 50px;
-                    outline: none;
-                    &::placeholder{
-                        padding:20px;
-                    }
-                }
-                button{
-                    min-width: 15%;
-                    padding:0 15px;
-                    height: 50px;
-                    border-radius:5px;
-                    background-color: $Cyan;
-                    color:$white;
-                    cursor: pointer;
-                    &:hover{
-                        color:$white;
-                        background-color:hsl(180, 66%, 60%);
-                    }
-                }
-            }
-            .search-bar-prompt{
-                display: flex;
-                visibility:hidden;
-                justify-content: center;
-                padding: 5px;
-                p{
-                    margin: 0;
-                    padding-left: 5px;
-                    width: 85%;
-                    color: $red;
-                }
-            }
-        }
-        .search-table{
-            display: none;
-            flex-direction: column;
-            justify-content: space-around;
-            margin:5px;
-            padding:10px 5px;
-            width: 100%;
-            .search-table-text{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                background: $white;
-                list-style-type: none;
-                margin:5px 0;
-                height: 50px;
-                p{
-                    margin:0;
-                }
-            }
-        }
-    }
     p{
         color:$gray;
+    }
+    .search-table{
+        display: flex;
+        flex-direction: column;
+        margin:5px;
+        padding:10px 5px;
+        width: 100%;
+        .search-table-context{
+            display: flex;
+            align-items:center;
+            background: $white;
+            list-style-type: none;
+            margin:10px 0;
+            padding:10px 30px;
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            .search-table-text{
+                color:#000;
+                width: 100%;
+                margin: 0;
+                overflow:hidden;
+                white-space: nowrap;
+                text-overflow:ellipsis;
+            }
+            .search-table-link{
+                justify-self: flex-end;
+                text-decoration: none;
+                text-align: right;
+                color:$Cyan;
+                margin-left: auto ;
+                padding-left:20px;
+                width: 30%;
+            }
+            .copy{
+                margin-left: 10px;
+                width: 80px;
+                border-radius:5px;
+                color:#fff;
+                background: $Cyan;
+                &:hover{
+                    background:hsl(180, 66%, 60%)
+                }
+            }
+        }
     }
     .main-title{
         margin:50px auto ;
@@ -335,11 +422,12 @@ main{
         }
         .main-text{
             display:flex;
+            flex-direction: column;
             width:300px;
             height:200px;
             margin:20px;
             padding: 20px;
-            flex-direction: column;
+            border-radius: 10px;
             background-color: $white;
             p{
                 font-size: 10px;
@@ -380,43 +468,40 @@ main{
 
 @media (max-width:414px) {
     main{
-        .search{
-            .search-bar{
+        padding: 20px;
+        .search-table{
+            margin:0;
+            margin-top: 90px;
+            padding: 10px 0;
+            width: 100%;
+            .search-table-context{
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                top:-7%;
-                height: 150px;
-                .search-bar-input{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    margin:0;
+                margin:5px 0;
+                padding: 15px;
+                width: 100%;
+                height: 100%;
+                .search-table-text{
+                overflow:hidden;
+                white-space: nowrap;
+                text-overflow:ellipsis;
+                }
+                .search-line{
+                    border-bottom: 1px solid $gray;
+                    max-width: 100%;
+                    margin: 5px 0;
+                }
+                .search-table-link{
+                    text-align: left;
                     padding: 0;
-                    input{
-                        width: 100%;
-                        height: 40px;
-                        margin:5px auto;
-                        padding: 0 10px;
-                    }
-                    button{
-                        width: 100%;
-                        margin:5px auto;
-                        height: 40px;
-                    }
+                    width: 100%;
+                }
+                .copy{
+                    margin-left: 0;
+                    width: 100%;
+                    height: 40px;
                 }
             }
-                .search-table{
-                    margin-top: 40px;
-                    ul{
-                        
-                        li{
-                            
-                        }
-                    }
-                }
         }
         .main-title{
             margin:30px 0 auto;
