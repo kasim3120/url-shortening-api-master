@@ -484,7 +484,7 @@ main .search-table .search-table-context {
   margin: 10px 0;
   padding: 10px 30px;
   width: 100%;
-  height: 50px;
+  height: 60px;
   border-radius: 5px;
 }
 
@@ -509,7 +509,8 @@ main .search-table .search-table-context .search-table-link {
 
 main .search-table .search-table-context .copy {
   margin-left: 10px;
-  width: 80px;
+  width: 150px;
+  height: 35px;
   border-radius: 5px;
   color: #fff;
   background: #2acfcf;
