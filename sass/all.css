@@ -701,8 +701,8 @@ main .main-text-card .main-text.fully::before {
     margin: 5px 0;
   }
   main .search-table .search-table-context .search-line {
-    border-bottom: 2px solid #bfbfbf;
-    max-width: 100%;
+    border-bottom: 1px solid #bfbfbf;
+    width: 100%;
     margin: 5px 0;
   }
   main .search-table .search-table-context .search-table-link {
