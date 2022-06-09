@@ -74,5 +74,14 @@ searchBtn.addEventListener('click', function(){
     }
 })
 
+//btnText.addEventListener('click', e => copyText())
+//const copyText = () => {
+//    const el = document.createElement('textarea')
+//     el.value = e.target.innerText
+//     document.body.appendChlid(el)
+//     el.select()
+//     document.eexecCommand('copy')
+//     document.body.removeChlid(el)
+}
 
 console.log(`未解決問題: 搜尋相同網址BUG , Copy未建立動作`)
